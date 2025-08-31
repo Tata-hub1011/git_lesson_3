@@ -20,16 +20,24 @@ void bubble_sort(std::vector<int>& arr)
     }
 }
 
-int main()
+void show(const std::vector<int>& arr)
 {
-    std::vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    std::vector<int> arr = {1,2,3,4,5,6,7,8,9,10};
-    bubble_sort(arr);
-    std::cout << "Sorted array is: ";
+ std::cout << "Sorted array is: ";
     for (int i = 0; i < arr.size(); ++i)
     {
         std::cout << arr[i] << " ";
     }
     std::cout << "\n";
+}
+int main()
+{
+    std::vector<int> arr1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    std::vector<int> arr2 = {1,2,3,4,5,6,7,8,9,10};
+    bubble_sort(arr1);
+    show(arr1);
+
+    bubble_sort(arr2);
+    show(arr2);
+   
     return 0;
 }
